@@ -1,0 +1,26 @@
+@use "../../styles/abstracts/mixins";
+
+.ctaSection {
+  min-height: 10vh;
+  @include mixins.green-pattern-bg;
+  padding: var(--space-lg);
+}
+
+.container {
+  @include mixins.flex-center-column;
+  gap: var(--space-md);
+  color: white;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.actions {
+  @include mixins.flex-center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,122 @@
+@use "../../styles/abstracts/mixins";
+
+.problem {
+  position: relative;
+  padding: var(--space-xl);
+  width: 100%;
+  background: var(--color-bg);
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
+
+.heading {
+  @include mixins.flex-center-column;
+  justify-content: space-around;
+  gap: var(--space-md);
+
+  div {
+    text-align: center;
+  }
+
+  h2 {
+    color: var(--color-primary);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: var(--space-sm);
+  @include mixins.hover-transition;
+}
+
+.cardContent {
+  flex: 2;
+  p {
+    line-height: 1.5;
+  }
+}
+
+.cardIcon {
+  flex: 1;
+  @include mixins.flex-center;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    box-shadow: var(--shadow);
+  }
+}
+
+.curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.curve svg {
+  position: relative;
+  display: block;
+  height: 89px;
+  width: 100%;
+}
+
+.curve .shapeFill {
+  fill: var(--color-primary-dark);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .problem {
+    padding: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .cardIcon,
+  .cardContent {
+    flex: unset;
+  }
+}
+
+@media (max-width: 360px) {
+  .problem {
+    padding: var(--space-md);
+  }
+
+  .card {
+    padding: var(--space-md);
+  }
+}

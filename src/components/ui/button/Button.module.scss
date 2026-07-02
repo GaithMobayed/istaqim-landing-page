@@ -1,0 +1,32 @@
+@use "../../../styles/abstracts/mixins";
+
+.btn {
+  color: inherit;
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: var(--color-border) solid 1px;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  cursor: pointer;
+  @include mixins.hover-transition;
+}
+
+.primary {
+  font-weight: 700;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.transparent {
+  font-weight: 700;
+  background-color: transparent;
+  color: var(--color-bg);
+}
+
+.languageToggle{
+  @extend .transparent;
+  padding: 5px;
+  text-decoration: wavy;
+}

@@ -1,0 +1,84 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-start-column {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+@mixin flex-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@mixin flex-around-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin container {
+  width: 100%;
+  padding: 0 var(--space-xl);
+  @media (max-width:1000px) {
+      padding: 0 var(--space-md);
+    }
+}
+@mixin white-pattern-bg {
+  background-image: url("../../assets/bg/pattern/white-pattern.svg");
+  background-color: var(--color-bg);
+  background-size: 80px 80px;
+  background-repeat: repeat;
+}
+@mixin green-pattern-bg {
+  background-color: var(--color-primary);
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent),
+    url("../../assets/bg/pattern/green-pattern.svg");
+  background-size:
+    cover,
+    80px 80px;
+  background-repeat: no-repeat, repeat;
+}
+@mixin hover-transition {
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+@mixin responsive-font($desktop-fs, $tablet-fs, $mobile-fs) {
+  font-size: var(#{$desktop-fs});
+
+  @media (max-width: 1000px) {
+    font-size: calc(var(#{$desktop-fs}) * 0.9);
+  }
+
+  @media (max-width: 768px) {
+    font-size: var(#{$tablet-fs});
+  }
+
+  @media (max-width: 480px) {
+    font-size: var(#{$mobile-fs});
+  }
+
+  @media (max-width: 360px) {
+    font-size: calc(var(#{$mobile-fs}) * 0.9);
+  }
+}

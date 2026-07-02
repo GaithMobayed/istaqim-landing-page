@@ -1,0 +1,107 @@
+@use "../../styles/abstracts/mixins";
+
+.featuresSection {
+  position: relative;
+  width: 100%;
+  padding: var(--space-lg);
+  background: var(--color-bg);
+  .header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+
+    h2 {
+      color: var(--color-primary);
+    }
+
+    p {
+      margin-top: var(--space-sm);
+      color: var(--color-body);
+    }
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.feature {
+  width: 100%;
+  @include mixins.flex-between;
+  @include mixins.hover-transition;
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-md);
+
+  .text {
+    padding-inline: var(--space-sm);
+    h3 {
+      margin-bottom: var(--space-sm);
+      color: var(--color-primary);
+    }
+
+    p {
+      line-height: 1.7;
+      color: var(--color-body);
+      max-width: 500px;
+    }
+  }
+
+  .visual {
+    @include mixins.flex-center;
+  }
+
+  .iconBox {
+    @include mixins.flex-center;
+    width: 340px;
+    aspect-ratio: 2/1;
+    border: 1px var(--color-border) solid;
+    border-radius: var(--radius-md);
+    img {
+      max-width: 80%;
+      max-height: 80%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1000px) {
+  .feature {
+    @include mixins.flex-center-column;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .text {
+    @include mixins.flex-center-column;
+    p {
+      max-width: 100%;
+    }
+  }
+
+  .visual {
+    width: 100%;
+  }
+
+  .iconBox {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature {
+    gap: var(--space-md);
+  }
+}
+
+

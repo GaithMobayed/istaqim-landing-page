@@ -1,0 +1,13 @@
+@use "../../../styles/abstracts/mixins";
+
+.buttons {
+  @include mixins.flex-center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .buttons {
+    width: 100%;
+    gap: 10px;
+  }
+}

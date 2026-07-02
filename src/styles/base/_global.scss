@@ -1,0 +1,71 @@
+@use "../abstracts/mixins";
+@font-face {
+  font-family: "ArabicFont";
+  src: url("/src/assets/fonts/Cairo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-bg);
+  font-weight: 500;
+  color: var(--color-body);
+  line-height: 1.6;
+  width: 100vw;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html[dir="rtl"] body{
+  font-family: "ArabicFont", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  @include mixins.responsive-font(--fs-huge, --fs-xxl, --fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+}
+
+h2 {
+  @include mixins.responsive-font(--fs-xxl, --fs-xl, --fs-lg);
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+}
+
+h3 {
+  @include mixins.responsive-font(--fs-xl, --fs-lg, --fs-md);
+  font-weight: var(--fw-semibold);
+}
+
+p {
+  @include mixins.responsive-font(--fs-md, --fs-base, --fs-sm);
+  font-weight: var(--fw-regular);  
+}
+
+html[dir="rtl"] {
+  body {
+    font-family: "ArabicFont", sans-serif;
+  }
+  
+  h1, h2, h3, p {
+    line-height: 1.7; 
+  }
+}.app {
+  display: flex;
+  flex-direction: column;
+}

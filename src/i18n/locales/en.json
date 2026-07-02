@@ -1,0 +1,173 @@
+{
+  "hero": {
+    "title": "A Digital Home for Your Mosque’s Learning Program",
+    "subtitle": "Manage halaqah, track Quran progress, and support your students—all in one simple platform built for mosques.",
+    "support": "Designed for coordinators, teachers, and communities who want structure without complexity.",
+    "cta_primary": "Request a Demo",
+    "cta_secondary": "Get Started"
+  },
+  "problem": {
+    "title": "Running a Halaqah shouldn't be this hard",
+    "description": "Many mosques rely on scattered tools like WhatsApp groups, spreadsheets, and manual tracking.",
+    "subtitle": "This leads to:",
+    "cards": {
+      "attendance": {
+        "title": "Lost attendance records",
+        "desc": "Attendance is often tracked in chats or on paper, making it easy to lose track of who actually showed up."
+      },
+      "progress": {
+        "title": "Unclear student progress",
+        "desc": "There’s no clear view of who is improving, falling behind, or staying consistent in their Quran journey."
+      },
+      "structure": {
+        "title": "No consistent structure across groups",
+        "desc": "Each group follows its own system, leading to confusion, inconsistency, and lack of standardization."
+      },
+      "workload": {
+        "title": "Heavy workload on coordinators",
+        "desc": "Coordinators spend too much time organizing, tracking, and fixing issues instead of focusing on students."
+      }
+    }
+  },
+  "solution": {
+    "question": {
+      "before": "Tired of the",
+      "highlight": "chaos?"
+    },
+    "brand": "Istqim",
+    "title": "Brings Everything Together",
+    "description": "Everything is in one place, built specifically for mosque environments.",
+    "items": {
+      "attendance": "Attendance",
+      "tasks": "Weekly Tasks",
+      "quran": "Quran Memorization",
+      "lessons": "Structured Lessons"
+    }
+  },
+  "features": {
+    "title": "Key Features",
+    "subtitle": "Everything you need to run a structured mosque program.",
+    "items": {
+      "tasks": {
+        "title": "Structured Weekly Tasks",
+        "desc": "Define what matters each week and track student consistency with ease."
+      },
+      "quran": {
+        "title": "Quran Progress Tracking",
+        "desc": "Follow memorization, set goals, and recognize quality—not just completion."
+      },
+      "attendance": {
+        "title": "Attendance Made Simple",
+        "desc": "Track presence, lateness, and engagement across groups or lessons."
+      },
+      "lessons": {
+        "title": "Lessons & Teaching (Optional)",
+        "desc": "Run structured classes with teachers, schedules, and materials."
+      },
+      "points": {
+        "title": "Points & Motivation",
+        "desc": "Encourage consistency with transparent points and achievements."
+      },
+      "notifications": {
+        "title": "Announcements & Notifications",
+        "desc": "Keep everyone informed and engaged—without chaos."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Simple Setup, Real Impact.",
+    "steps": {
+      "setup": {
+        "title": "Set up your mosque",
+        "desc": "Add your groups, rules, and program structure."
+      },
+      "invite": {
+        "title": "Invite members",
+        "desc": "Students apply or are added and assigned to groups."
+      },
+      "run": {
+        "title": "Run your program",
+        "desc": "Track tasks, attendance, Quran, and lessons."
+      },
+      "monitor": {
+        "title": "Monitor progress",
+        "desc": "See who is improving and who needs support."
+      }
+    }
+  },
+  "benefits": {
+    "question":{
+      "before":"The real ",
+      "highlight":"impact"
+    },
+    "title": {
+      "before": "Built for Real",
+      "highlight": "Mosque Needs"
+    },
+    "items": {
+      "noSpreadsheets": "No more spreadsheets",
+      "visibility": "Clear visibility on every student",
+      "flexible": "Flexible to your program style",
+      "scales": "Scales with your community",
+      "organized": "Keeps everything organized and fair"
+    }
+  },
+  "flexibility": {
+    "title": "Your Mosque, Your Rules",
+    "lines": {
+      "line1": "Every mosque is different.",
+      "line2": "Istqim adapts to your structure—not the other way around.",
+      "line3": "Enable only the features you need, define your own rules, and keep full control over your community."
+    },
+    "cards": {
+      "a": {
+        "title": "Mosque A",
+        "items": {
+          "tasks": "Weekly Tasks",
+          "quran": "Quran Tracking",
+          "lessons": "Lessons"
+        }
+      },
+      "b": {
+        "title": "Mosque B",
+        "items": {
+          "lessons": "Lessons",
+          "attendance": "Attendance",
+          "points": "Points"
+        }
+      },
+      "c": {
+        "title": "Mosque C",
+        "items": {
+          "quranOnly": "Quran Only",
+          "points": "Points",
+          "tasks": "Tasks"
+        }
+      }
+    },
+    "status": {
+      "on": "ON",
+      "off": "OFF"
+    }
+  },
+  "cta": {
+    "title": "Start Organizing Your Program Today",
+    "text": "Give your students clarity. Give your team full control.",
+    "buttons": {
+      "demo": "Request a Demo",
+      "contact": "Contact Us"
+    }
+  },
+  "nav":{
+    "problems":"Problems",
+    "solution":"Solution",
+    "features":"Features",
+    "how":"How it works",
+    "benefits":"Benefits",
+    "customize":"Customization",
+    "contact":"Contact",
+    "openApp":"Open App"
+  }
+
+}

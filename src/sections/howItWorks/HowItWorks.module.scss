@@ -1,0 +1,118 @@
+@use "../../styles/abstracts/mixins";
+
+.section {
+  padding-inline: var(--space-lg);
+  @include mixins.flex-center-column;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+
+  h2 {
+    color: var(--color-primary);
+  }
+
+  p {
+    color: var(--color-body);
+    margin-top: var(--space-sm);
+  }
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.circle {
+  width: var(--space-xl);
+  height: var(--space-xl);
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+.line {
+  position: absolute;
+  top: calc(var(--space-xl) / 2);
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary);
+  z-index: 1;
+}
+
+.arabicLine {
+  left: 0%;
+  right: 50%;
+}
+
+.content {
+  margin-top: var(--space-md);
+  text-align: center;
+  max-width: 240px;
+
+  h3 {
+    margin-bottom: var(--space-xs);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: var(--space-sm);
+  }
+
+  p {
+    color: var(--color-body);
+    max-lines: 4;
+    text-overflow: ellipsis;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section {
+    @include mixins.flex-start-column;
+  }
+
+  .timeline {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .step {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: start;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .line {
+    display: none;
+  }
+
+  .circle {
+    flex-shrink: 0;
+  }
+
+  .content {
+    text-align: start;
+  }
+}

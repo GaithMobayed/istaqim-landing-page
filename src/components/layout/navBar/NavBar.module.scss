@@ -1,0 +1,135 @@
+@use "../../../styles/abstracts/mixins";
+
+.navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .container {
+    @include mixins.container;
+    @include mixins.flex-between;
+  }
+
+  &.transparent {
+    background-color: transparent;
+    .logo,
+    .navLinks a {
+      color: var(--color-white);
+    }
+    .appLink,
+    .languageSwitch {
+      color: var(--color-white) !important;
+      border-color: var(--color-border);
+    }
+  }
+
+  &.sticky {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    height: 70px;
+
+    .logo {
+      color: var(--color-primary);
+    }
+    .navLinks a {
+      color: var(--color-body);
+    }
+
+    .appLink,
+    .languageSwitch {
+      color: var(--color-primary) !important;
+      border-color: var(--color-border);
+    }
+  }
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  .logoGroup {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+
+    .logo {
+      text-decoration: none;
+      transition: color 0.3s ease;
+      :global(html[dir="ltr"]) & {
+        letter-spacing: 1px;
+      }
+    }
+    .appLink {
+      padding: 4px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--color-body);
+      @include mixins.hover-transition;
+
+      @media (max-width: 1000px) {
+        display: none;
+      }
+    }
+  }
+
+  .navLinks {
+    display: flex;
+    gap: var(--space-lg);
+    list-style: none;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--color-accent) !important;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+
+    .languageSwitch {
+      box-shadow: none !important;
+    }
+
+    .contactBtn {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+
+      box-shadow: 0 4px 6px rgba(15, 118, 110, 0.2);
+      @include mixins.hover-transition;
+
+      &:hover {
+        background-color: var(--color-primary-dark);
+        box-shadow: 0 6px 15px rgba(15, 118, 110, 0.3);
+      }
+    }
+  }
+}
+
+:global(html[dir="rtl"]) {
+  .navBar {
+    font-family: "Cairo", sans-serif; 
+  }
+}

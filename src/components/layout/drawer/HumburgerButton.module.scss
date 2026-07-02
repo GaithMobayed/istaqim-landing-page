@@ -1,0 +1,32 @@
+@use "../../../styles/abstracts/mixins";
+
+.menuIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xs);
+  transition: var(--transition-smooth);
+  z-index: 1100;
+
+  &:hover {
+    transform: scale(1.1);
+    color: var(--color-accent);
+  }
+  & svg{
+    color: white;
+  }
+
+  display: none;
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}
+
+
+
+.primaryColor svg{
+  color: var(--color-primary);
+}
