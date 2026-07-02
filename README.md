@@ -81,3 +81,7 @@ npm run preview
 - Composing a landing page from independently developed, reusable sections
 - Configuring Vite with TypeScript strict mode for production-grade development
 
+
+## Live demo 
+
+https://istaqim-landing-page.vercel.app/
